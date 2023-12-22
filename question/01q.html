@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jav-Script & Basic DOM Que-Ans</title>
+</head>
+<body>
+<h1> 1. What is JavaScript? </h1>
+<h3> 
+    <li>It is client-side scripting language.</li>
+    <li>JS is used to change behaviour of a website.</li>
+    <li>JS is used to make Dynamic Chnages in website.</li>
+</h3>
+<hr>
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+<h1> 2. What is the use of isNaN function? </h1>
+<h3>
+    ==> isNan is used to check wheter the inputed or inserted value is a number value or not. 
+</h3>
+<hr>
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+<h1> 3. What is negative Infinity? </h1>
+<h3>
+    ==> NEGATIVE_INFINITY is a special numeric value that is returned when an arithmetic operation or mathematical function generates a negative value greater than the largest representable number in JavaScript.
+</h3>
+<hr>
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+<h1> 4. Which company developed JavaScript? </h1>
+<h3>
+    ==> JavaScript was created at Netscape Communications by Brendan Eich. 
+</h3>
+<hr>
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+<h1> 5. What are undeclared and undefined variables? </h1>
+<h3>
+    ==> undeclared variables are the variables which are not declared yet and when we try to print it in console it shows an declaration error and print Not Declared. 
+</h3>
+<h3>
+    ==> undefined variables are the variables which are declared in JavaScript but any values are not assigned to it, and when we print it in console it shows undefined.
+</h3>
+<hr>
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+<h1> 6. Write the code for adding new elements dynamically? </h1>
+<h3>
+    ==> 
+    <!DOCTYPE html> 
+    <html lang="en"> 
+
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+        <style> 
+            html, body 
+            { 
+                height: 100%; 
+                width: 100%; 
+            } 
+
+            .button 
+            { 
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+            } 
+
+            .tasks 
+            { 
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                flex-direction: column; 
+                margin-top: 20px; 
+            } 
+        </style> 
+    </head> 
+
+    <body> 
+        
+        <div class="button"> <button id="addTask">Add task</button> </div> 
+        <div class="tasks"></div> 
+
+        <script> 
+
+            let task = document.getElementsByClassName("tasks"); 
+            let addTask = document.getElementById("addTask"); 
+            
+            addTask.addEventListener('click', function () 
+            {
+                for (let i = 0; i < task.length; i++) 
+                { 
+                    let newDiv = document.createElement("div"); 
+                    newDiv.setAttribute("class", "list"); 
+                    newDiv.innerText = "New Div created"; 
+                    task[i].append(newDiv); 
+                } 
+            }) 
+        </script> 
+    </body> 
+
+    </html> 
+</h3>
+<hr>
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+<h1> 7. What is the difference between ViewState and SessionState? </h1>
+<h3>
+    ==> ViewState is to manage state at the client's end, while SessionState manages state at the server's end.
+</h3>
+<hr>
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+<h1> 8. What is === operator? </h1>
+<h3>==> "===" is a comparision operator. 
+<br>==> It is also called as 'Strict equal to'. 
+<br>==> It checks for equal value and equal type. 
+<br>==> '===' (Triple equals) is a strict equality comparison operator in JavaScript, which returns false for the values which are not of a similar type. This operator performs type casting for equality. If we compare 2 with “2” using ===, then it will return a false value.</h3>
+<hr>
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+<h1> 9. How can the style/class of an element be changed? </h1>
+<h3>==> In JavaScript we can change the style/css of an element in two ways.</h3>
+<br>==> <b><u>Approach 1: </u>Changing CSS with the help of the style property:</b>
+<br> Syntax: document.getElementById("id").style.property = new_style;
+<br>
+<br>==> <b><u>Approach 2: </u>Approach 2: Changing the class itself – We can use two properties that can be used to manipulate the classes.</b>
+<br> Syntax: document.getElementById("id").classList
+<hr>
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+<h1> 10. How to read and write a file using JavaScript? </h1>
+<h3>==> In JavaScript, we can read and write a file using different inbuilt methods of JavaScript.</h3>
+<h2>The file can be read using fs.readFile() function.</h2>
+Syntax for read file : fs.readFile( file_name, encoding, callback_function )
+<h2>The fs.writeFile() function is used to write data to a file in an asynchronous manner. If the file already exists, it will be replaced.</h2>
+Syntax for write : fs.writeFile( file_name, data, options, callback )
+<hr>
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+<h1> 11. What are all the looping structures in JavaScript? </h1>
+<h3>==> Loops in JavaScript are used to repeart the code.</h3>
+<br>==> There are three loops in JS:
+<h4>1. For loop</h4>
+If you want to run the same code over and over again, each time with a different value for loop is used.
+<br>The for statement creates a loop with 3 optional expressions.
+<br><u>Syntax :</u>
+<br>for (expression 1; expression 2; expression 3) 
+<br>{
+<br>  // code block to be executed
+<br>}
+<h4>2. While loop</h4>
+The while loop loops through a block of code as long as a specified condition is true.
+<br><u>Syntax :</u>
+<br>while (condition) {
+<br>  // code block to be executed
+<br>}
+<h4>3. do-while loop</h4>
+The do while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+<br><u>Syntax :</u>
+<br>do {
+<br>  // code block to be executed
+<br>}
+<br>while (condition);
+<hr>
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+<h1> 12. How can you convert the string of any base to an integer in JavaScript? </h1>
+<h3>==> In JavaScript parseInt() function (or a method) is used to convert the passed-in string parameter or value to an integer value itself.</h3>
+<hr>
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+<h1> 13. What is the function of the delete operator? </h1>
+<h3>==> The delete operator removes a property from an object. If the property's value is an object and there are no more references to the object, the object held by that property is eventually released automatically.</h3>
+<hr>
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+<h1> 14. What are all the types of Pop up boxes available in JavaScript? </h1>
+<h3>==> In JavaScript there are three types of pop-up boxes available.</h3>
+<ol>
+    <li>1. alert</li>
+    ==> in alert pop up box there is only one option option/button ('Okay')
+    <li>2. confirm</li>
+    ==> in confirm pop up box there are two options/buttons ('cancel and okay')
+    <li>3. propmt</li>
+    ==> in propmt pop up box there are three options/ 2 buttons ('cncel , okay') 1 input ('input')
+</ol>
+<hr>
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+<h1> 15. What is the use of Void (0)? </h1>
+<h3>==> JavaScript void 0 means returning undefined (void) as a primitive value</h3>
+<h3>==> It is used to prevent any side effects caused while inserting an expression in a web page.</h3>
+<hr>
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+<h1> 16. How can a page be forced to load another page in JavaScript? </h1>
+<h3>==> We can use window. location property inside the script tag to forcefully load another page in Javascript</h3>
+<hr>
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+<h1> 17. What are the disadvantages of using innerHTML in JavaScript? </h1>
+<h3>==> Disadvantages of using innerHTML in JavaScript are listed below:</h3>
+<li>Event handlers attached to any DOM element are preserved.</li>
+<li>Replacement is done everywhere.</li>
+<li>It is not possible to append innerHTML.</li>
+<li>Breaks the document.</li>
+<li>Used for Cross-site Scripting.</li>
+<hr>
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+</body>
+</html>
